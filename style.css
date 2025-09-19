@@ -250,6 +250,7 @@ height: 100px;
     background-color: rgb(245,245,245);
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .modal__languages{
@@ -259,6 +260,29 @@ height: 100px;
 
 .modal__language{
     width: 25%;
+    padding: 16px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     transition: all 350ms ease;
+}
+
+.modal__language:hover .language__name{
+    transform: scale(1);
+   
+}
+
+.modal__language:hover{
+filter: brightness(80%);
+transform: scale(0.9);
+}
+
+.language__name{
+    position: absolute;
+    bottom: -10px ;
+    transform: scale(0);
+     transition: all 350ms ease;
 }
 
 .modal__language--img{
@@ -268,6 +292,20 @@ height: 100px;
 .modal__contact{
     background-color:#242424 ;
     color: white;
+}
+
+.modal__title{
+    font-size: 26px;
+
+}
+
+.modal__sub-title{
+    margin: 12px 0 24px 0 ;
+}
+
+.modal__para{
+    margin-bottom: 12px;
+    line-height: 1.75;
 }
 
 
