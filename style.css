@@ -339,6 +339,22 @@ transform: scale(0.9);
 
 }
 
+.form__submit{
+    background-color: #f06449;
+    border: 2px solid #f06449;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    max-width: 240px;
+    padding: 12px 24px;
+    font-size: 20px;
+}
+
+.form__submit:hover{
+    border-color: white;
+    background-color: transparent;
+}
+
 
 /* Projects */
 
