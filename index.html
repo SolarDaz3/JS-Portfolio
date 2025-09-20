@@ -37,7 +37,7 @@
             link__hover-effect--black"
             >Projects</a>
           </li>
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()">
             <a href="#" class="nav__link--anchor 
             link__hover-effect
             link__hover-effect--black"
@@ -55,7 +55,7 @@
         <div class="header__content">
           <h1 class="title" >Hey</h1>
           <h1 class="title orange" >I'm Jeremy.</h1>
-          <p class="header__para">I'm a <b class="orange"> Software Engineer</b> with an immense passion for building web applications with fantasic user experiances! <br> Here's a tad more <b class="orange">about me!</b></p>
+          <p class="header__para">I'm a <b class="orange"> Software Engineer</b> with an immense passion for building web applications with fantasic user experiances! <br> Here's a tad more <b class="orange click" onclick="toggleModal()">about me!</b></p>
           <div class="social__list">
             <a href="https://www.linkedin.com/in/jeremy-galan-a3b516366/" target="_blank" class=" social__link click">
               <i class="fa-brands fa-square-linkedin"></i>
@@ -70,7 +70,7 @@
         
         </div>
       </header>
-      <button class="mail__btn click">
+      <button class="mail__btn click" onclick="toggleModal()">
         <i class="fa-solid fa-paper-plane"></i>
       </button>
       <a href="#projects" class="scroll">
@@ -105,6 +105,7 @@
           </div>
         </div>
         <div class="modal__half modal__contact">
+          <i class="fa-solid fa-times modal__exit click" onclick="toggleModal()"></i>
           <h3 class="modal__title modal__title--contact">
             Let's have a chat!
           </h3>
@@ -133,7 +134,6 @@
             Thanks for reaching out. Looking forwards to speaking with you soon!
           </div>
         </div>
-        <i class="fa-solid fa-times modal__exit click"></i>
       </div>
     </section>
     <section id="projects">
