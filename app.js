@@ -50,10 +50,10 @@ else{
 }
 
 function toggleModal() {
-    if (isModalOpen ){
-        
+    if (isModalOpen ) {
+        isModalOpen = false;
         return document.body.classList.remove("modal--open");
     }
-    isModalOpen = !isModalOpen;
-    document.body.classList += " modal--open"
+    isModalOpen = true;
+    document.body.classList.add("modal--open")
 }
