@@ -229,7 +229,7 @@ nav,.scroll, .header{
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
     bottom: 32px;
     right: 40px;
 }
