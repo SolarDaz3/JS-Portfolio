@@ -25,14 +25,14 @@
           <img id="personal-logo" src="./assets/Final logo.png" alt="">
         </figure>
         <ul class="nav__link--list">
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()">
             <a href="#" class="nav__link--anchor 
             link__hover-effect
             link__hover-effect--black"
             >About</a>
           </li>
           <li class="nav__link">
-            <a href="#" class="nav__link--anchor 
+            <a href="#projects" class="nav__link--anchor 
             link__hover-effect
             link__hover-effect--black"
             >Projects</a>
@@ -70,9 +70,12 @@
         
         </div>
       </header>
-      <button class="mail__btn click" onclick="toggleModal()">
-        <i class="fa-solid fa-paper-plane"></i>
-      </button>
+      <a href="#">
+        <button class="mail__btn click" onclick="toggleModal()">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+        </a>
+
       <a href="#projects" class="scroll">
         <div class="scroll__icon click"></div>
       </a>
@@ -222,7 +225,7 @@
           ">
           LinkedIn
         </a>
-        <a href="https://github.com/SolarDaz3" target="_blank" class=
+        <a href="#"  onclick="toggleModal()" class=
         "footer__social--link
         link__hover-effect
         link__hover-effect--white
