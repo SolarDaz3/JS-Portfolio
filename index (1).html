@@ -6,7 +6,18 @@
     <title>Jeremy Galan</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a690b63af9.js" crossorigin="anonymous"></script>
-</head>
+    <script src="app.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "sY21Of6ET8YaubR4g",
+      });
+   })();
+</script>
+  </head>
 <body>
     <section id="landing-page">
       <nav>
@@ -26,13 +37,13 @@
             link__hover-effect--black"
             >Projects</a>
           </li>
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()">
             <a href="#" class="nav__link--anchor 
             link__hover-effect
             link__hover-effect--black"
             >Contact</a>
           </li>
-          <li class="nav__link click">
+          <li class="nav__link click" onclick="toggleContrast()">
             <a href="#" class="nav__link--anchor 
             link__hover-effect
             link__hover-effect--black"
@@ -44,7 +55,7 @@
         <div class="header__content">
           <h1 class="title" >Hey</h1>
           <h1 class="title orange" >I'm Jeremy.</h1>
-          <p class="header__para">I'm a <b class="orange"> Software Engineer</b> with an immense passion for building web applications with fantasic user experiances! <br> Here's a tad more <b class="orange">about me!</b></p>
+          <p class="header__para">I'm a <b class="orange"> Software Engineer</b> with an immense passion for building web applications with fantasic user experiances! <br> Here's a tad more <b class="orange click" onclick="toggleModal()">about me!</b></p>
           <div class="social__list">
             <a href="https://www.linkedin.com/in/jeremy-galan-a3b516366/" target="_blank" class=" social__link click">
               <i class="fa-brands fa-square-linkedin"></i>
@@ -59,7 +70,7 @@
         
         </div>
       </header>
-      <button class="mail__btn click">
+      <button class="mail__btn click" onclick="toggleModal()">
         <i class="fa-solid fa-paper-plane"></i>
       </button>
       <a href="#projects" class="scroll">
@@ -94,13 +105,14 @@
           </div>
         </div>
         <div class="modal__half modal__contact">
+          <i class="fa-solid fa-times modal__exit click" onclick="toggleModal()"></i>
           <h3 class="modal__title modal__title--contact">
             Let's have a chat!
           </h3>
           <h4 class="modal__sub-title modal__sub-title--contact">
             I'm currently open to new opportunities! Let's connect!
           </h4>
-          <form id="contact__form" action="">
+          <form id="contact__form" onsubmit="contact(event)">
             <div class="form__item">
               <label class="form__item--label" >Name</label>
               <input class="input" name="user_name" type="text" required></input>
@@ -111,11 +123,17 @@
             </div>
             <div class="form__item">
               <label class="form__item--label" >Message</label>
-              <textarea class="input" name="message" type="text" required></textarea>
+              <textarea class="input" name="message" type="text" required ></textarea>
             </div>
+            <button id="contact__submit" class="form__submit">Send it my way</button>
           </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fa-solid fa-spinner"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--success">
+            Thanks for reaching out. Looking forwards to speaking with you soon!
+          </div>
         </div>
-
       </div>
     </section>
     <section id="projects">
